@@ -2,6 +2,7 @@ import numpy as np
 import cv2 as cv
 
 im = cv.imread('emitter.png')
+im = cv.medianBlur(im, 5)
 
 # second argument sorts edges by length?
 edges = cv.Canny(im, 0, 200)
